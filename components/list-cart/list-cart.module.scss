@@ -1,0 +1,60 @@
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  margin-bottom: 100px;
+}
+
+.cart {
+  width: 628px;
+  padding: 53px;
+}
+
+.bgBlack {
+  background: #2d2c2a;
+}
+.bgRed {
+  background: #ff3535;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 20px solid transparent;
+    border-bottom: 20px solid #cd1800;
+    border-left: 20px solid #cd1800;
+    background: white;
+  }
+}
+
+.title {
+  font-family: 'Styrene A Web';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 120%;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 25px;
+}
+.info {
+  color: white;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 130%;
+  margin: 0;
+}
+.item::marker {
+  color: #ff3535;
+}
+@media (max-width: 640px) {
+  .list {
+    grid-template-columns: 1fr;
+    row-gap: 23px;
+  }
+  .cart {
+    width: auto;
+  }
+}

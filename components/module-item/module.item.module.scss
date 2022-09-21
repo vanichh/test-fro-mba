@@ -1,0 +1,90 @@
+$colorOrange: rgba(255, 53, 53, 1);
+
+.name.open {
+  background-color: $colorOrange;
+  color: white;
+}
+
+.section {
+  display: flex;
+}
+
+.name {
+  position: relative;
+  margin: 0;
+  font-family: 'Styrene A Web';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 120%;
+  margin-right: 80px;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: $colorOrange;
+    left: 0;
+    top: -30px;
+  }
+}
+
+.list.open {
+  display: block;
+}
+
+.list {
+  max-width: 300px;
+  width: 100%;
+  padding-block-start: 15px;
+  box-sizing: content-box;
+  .item {
+    font-family: 'Styrene A Web';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 120%;
+    color: #000000;
+  }
+
+  .item::marker {
+    color: $colorOrange;
+    margin-right: 15px;
+  }
+}
+@media (max-width: 640px) {
+  .section {
+    flex-direction: column;
+  }
+  .name {
+    font-family: 'Styrene A Web';
+    background: #f7f7f7;
+    padding-left: 60px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 130%;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 0;
+    &::before {
+      background: url('../../public/image/cross-icon.svg');
+      height: 18px;
+      width: 18px;
+      top: 18px;
+      left: 24px;
+    }
+  }
+  .name.open {
+    &::before {
+      background: white;
+      height: 2px;
+      top: 27px;
+    }
+  }
+  .list {
+    display: none;
+  }
+}

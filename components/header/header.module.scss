@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  justify-content: center;
+  font-family: 'Styrene A Web';
+  margin-bottom: 90px;
+
+  .title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 120%;
+    color: #000000;
+  }
+}
+@media (max-width: 640px) {
+  .header {
+    margin-bottom: 34px;
+    .title {
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 120%;
+    }
+  }
+}
